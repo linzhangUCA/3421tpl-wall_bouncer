@@ -1,15 +1,18 @@
-# Assignment - Python Practice
-Write code in `pwm_led.py` and `info_system.py` to complete this assignment.
+# Project - Wall Bouncing Robot
+> Please add/modify required sections to complete this report.
 
-### `pwm_led.py` (50%)
-Introducing PWM. You will learn how PWM control the light strenght of an LED. 
-You need to use RPi.GPIO library (`gpiozero` or other GPIO libraries are **NOT** allowed) to realize a slowly blinking LED.
-Light up the LED gradually in 2 seconds, then turn it off gradually in 1 seconds.
-Repeat this procedure until the program is stopped.
+This is the first project in Robotics 1 class. In this project, we will:
+- Build a mobile robot with processors, actuators and sensors that are introduced in the class.
+- Write Python code to realize the wall bouncing robot.
+- Use a `.sh` file to automatically run a program after booting up the RaspberryPi.
+- Complete a project report using this file (`README.md`).
+- Upload a short video for demonstration.
 
-### `info_system.py` (50%)
-You will polish your Python programming skills in this exercise.
-You will use LED in 4 different colors: GREEN, BLUE, RED, YELLOW and 2 buttons (B1 and B2) to indicate status of the robot.
+## Requirment
+1. Write Python code in `wall_bouncer.py`. 
+### Material List
+> Please list hardware (better with links) used in this project below.  
+
 
 **Workflow:**
 
