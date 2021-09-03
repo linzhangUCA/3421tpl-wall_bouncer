@@ -16,7 +16,7 @@ This is the first project in Robotics 1 class. In this project, we will:
 Record time consumption in **Playing** mode, once over 60 seconds, light up YELLOW LED. If over 90 seconds, blink (turn on then turn off) the RED LED 10 times, then shut down.
 
 ## Summary
-> Write below to complete this report. You may want to read the [Markdown guide](https://guides.github.com/features/mastering-markdown/) to better formatting this report.
+> Write below to complete this report. You may want to read the [Markdown guide](https://guides.github.com/features/mastering-markdown/) to better format this report.
 
 ### Material List
 > Please list hardware (better with links) used in this project below.  
