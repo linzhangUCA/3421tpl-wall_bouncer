@@ -1,5 +1,4 @@
 # Project - Wall Bouncing Robot
-> Please add/modify required sections to complete this report.
 
 This is the first project in Robotics 1 class. In this project, we will:
 - Build a mobile robot with processors, actuators and sensors that are introduced in the class.
@@ -8,17 +7,24 @@ This is the first project in Robotics 1 class. In this project, we will:
 - Complete a project report using this file (`README.md`).
 - Upload a short video for demonstration.
 
-## Requirment
-1. Write Python code in `wall_bouncer.py`. 
+## Workflow
+1. Enable the motors.
+2. Confirm the motors are enabled (check GPIO pins voltage level). Robot entering **Pausing** mode. Set the GREEN LED to be a dimmer.
+3. Press the button to enable the **Playing** mode. Robot should be able to move forward. Light up GREEN LED and keep the brightness a constant. Use the distance sensor (Feel free to use more than one) to monitor walls in front of the robot. Turn the robot away from the approaching wall within a certain distance.
+4. Press the button again will be able to switch the mode back to **Pausing**. Pressing the button later on can switch the mode back and forth. 
+
+Record time consumption in **Playing** mode, once over 60 seconds, light up YELLOW LED. If over 90 seconds, blink (turn on then turn off) the RED LED 10 times, then shut down.
+
+## Summary
+> Write below to complete this report. You may want to read the [Markdown guide](https://guides.github.com/features/mastering-markdown/) to better formatting this report.
+
 ### Material List
 > Please list hardware (better with links) used in this project below.  
 
+### Software List
+> Please list and briefly describe the Python libraries used and files added/modified in this repository.
 
-**Workflow:**
+### Usage
+> Briefly describe how to use this robot. Assuming you are going to hand over your robot to another student who is not in this class.
 
-1. Light up LEDs one by one in order: RED for 1 second >> YELLOW for 2 seconds >> BLUE for 3 seconds >> GREEN for 4 seconds >> blink ALL in 2Hz for 2 seconds. Button operations shall not interrupt this procedure. (20%)
-2. Slowly blink GREEN use PWM (2 seconds gradually on and 2 seconds gradually off). Press B1, GREEN stays on. Press B1 again, GREEN gets back to PWM blinking mode.
-3. Count time consumption of GREEN stays on (GO). DO NOT count GREEN blink (GB) time.
-4. If GO takes more than 10 seconds, light up YELLOW (other LED will remain their status). 
-5. If GO takes more than 20 seconds, blink RED in 2 Hz for 10 seconds. Then, shutdown the system (pull down all involved GPIOs).
-6. If press B1 and B2 together over 3 seconds, turn on BLUE and turn off all other LEDs.
+
