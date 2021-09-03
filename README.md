@@ -2,7 +2,7 @@
 
 This is the first project in Robotics 1 class. In this project, we will make a Roomba-like robot. The robot is expected to maneuver in a closed room without hitting the walls. The outcomes of this project are expected as follows:
 - Build a mobile robot with processors, actuators and sensors that are introduced in the class.
-- Write Python code to realize the wall bouncing robot (Feel free to write your code from scratch or start from [wall_bouncer.py](https://github.com/linzhangUCA/project_template-wall_bouncer/blob/main/wall_bouncer.py)).
+- Write Python code to realize the wall bouncing robot (Feel free to write your code from scratch or start from [`wall_bouncer.py`](https://github.com/linzhangUCA/project_template-wall_bouncer/blob/main/wall_bouncer.py)).
 - Figure out a way to automatically launch the robot after booting up the RaspberryPi. Briefly describe your automatic startup approach or upload the script you used.  
 - Complete a project report using this file (`README.md`).
 - Upload a video for demonstration (Unfortunately, you may need to compress your video before uploading).
