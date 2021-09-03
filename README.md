@@ -1,6 +1,6 @@
 # Project - Wall Bouncing Robot
 
-This is the first project in Robotics 1 class. In this project, we will:
+This is the first project in Robotics 1 class. In this project, we will make a Roomba-like robot. The robot is expected to maneuver in a closed room without hitting the walls. The outcomes of this project are expected as follows:
 - Build a mobile robot with processors, actuators and sensors that are introduced in the class.
 - Write Python code to realize the wall bouncing robot.
 - Use a `.sh` file to automatically run a program after booting up the RaspberryPi.
@@ -25,6 +25,6 @@ Record time consumption in **Playing** mode, once over 60 seconds, light up YELL
 > Please list and briefly describe the Python libraries used and files added/modified in this repository.
 
 ### Usage
-> Briefly describe how to use this robot. Assuming you are going to hand over your robot to another student who is not in this class.
+> Briefly describe how to use this robot. Imagine you are teaching a person how to use your robot.
 
 
