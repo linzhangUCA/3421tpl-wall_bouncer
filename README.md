@@ -17,18 +17,27 @@ You are expected to
 
 ### (70%) Programming
 1. (10%) Check sensor's health: 
-    - Check distance sensorsblink all the LEDs at the same time with frequency of 4 Hz, last 2 seconds. Then the robot enters **PAUSE** mode.
-2. (20%) When in **PAUSE** mode: `GREEN` LED endlessly fades in and fades out with frequency of 1 Hz. Press and release the button to switch mode to **WORK**.
-3. (20%) When in **WORK** mode: `GREEN` LED is constantly turned on. Press and release the button to switch mode to **PAUSE**.
-4. (20%) When in **WORK** or **PAUSE** mode, press and hold the button for 3 seconds to enter **DEV** mode. When in **DEV** mode, `BLUE` LED is constantly turned on and other LED should be turned off. 
-5. (15%) Time **WORK** mode. If the accumulated **WORK** time exceeds 15 seconds, turn on `YELLOW` LED (in **WORK** or **PAUSE** mode). If accumulated **WORK** time over 20 seconds, blink `RED` LED with frequency of 10 Hz for 2 seconds, then turn all the LEDs off and shutdown the system. 
-> If `RED` is blinking, you cannot enter **DEV** mode.
+    - Check distance sensor's health.
+    - Blink `GREEN` LED at frequency of 4 Hz for 2 seconds to indicate the distance sensor is working correctly. 
+    - Robot enters **PAUSE** mode if passed self-check.
+2. (5%) **PAUSE** mode: 
+    - `GREEN` LED endlessly fades in and fades out with frequency of 1 Hz. 
+    - Robot stops.
+    - Press and release the button to switch mode to **WORK**.
+3. (30%) **WORK** mode: 
+    - `GREEN` LED is constantly turned on. 
+    - Robot moves forward, turn a certain angle before getting too close to a wall. 
+    - Press and release the button to switch mode to **PAUSE**.
+4. (25%) Time **WORK** mode:
+    - If the accumulated **WORK** time exceeds 30 seconds, turn on `YELLOW` LED to indicate low battery. Set robot speed to 75% as in **WORK** mode. 
+    - If accumulated **WORK** time over 40 seconds, turn off `YELLOW` LED. Blink `RED` LED at frequency of 10 Hz for 2 seconds.
+    - After `RED` LED blinks over, turn all the LEDs off, stop the robot and shutdown the system. 
 
-### (15%) Documentation
+### (30%) Documentation
 Complete the following sections in this README. Please refer to [Github formatting guide](https://docs.github.com/en/get-started/writing-on-github) to get familiar with Markdown formatting.
 1. (5%) Hardware Table: list the names, descriptions and quantities of physical components used in this project.
-2. (5%) Wiring Diagram: attach a drawing to illustrate components wiring.
-3. (5%) Summary: a few words to close this project.
+2. (10%) Wiring Diagram: attach a drawing to illustrate components wiring.
+3. (15%) Summary: a few words to close this project.
 
 ## Hardware Table
 > Name, Description, Quantity
