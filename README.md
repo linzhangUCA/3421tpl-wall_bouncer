@@ -34,7 +34,6 @@ You are expected to
     - After `RED` LED blinks over, turn all the LEDs off, stop the robot and shutdown the system. 
 
 ### (30%) Documentation
-Complete the following sections in this README. Please refer to [Github formatting guide](https://docs.github.com/en/get-started/writing-on-github) to get familiar with Markdown formatting.
 1. (5%) Part List Table: list the names, descriptions and quantities of physical components used in this project.
 2. (10%) Wiring Diagram: attach a drawing to illustrate components wiring.
 3. (15%) Summary: describe technical details
