@@ -35,15 +35,15 @@ You are expected to
 
 ### (30%) Documentation
 Complete the following sections in this README. Please refer to [Github formatting guide](https://docs.github.com/en/get-started/writing-on-github) to get familiar with Markdown formatting.
-1. (5%) Hardware Table: list the names, descriptions and quantities of physical components used in this project.
+1. (5%) Part List Table: list the names, descriptions and quantities of physical components used in this project.
 2. (10%) Wiring Diagram: attach a drawing to illustrate components wiring.
-3. (15%) Summary: a few words to close this project.
+3. (15%) Summary: describe technical details
 
-## Hardware Table
+## Part List Table
 > Name, Description, Quantity
 
 ## Wiring Diagram
 > ![image name](link)
 
 ## Summary
-> What has been done? What are learned? Any thoughts? Any discussions?
+> Describe your robot's speed, distance detection threshold, turning strategy, etc.. Place as many technical details as possible in this section.
