@@ -1,31 +1,40 @@
-# Project - Wall Bouncing Robot
+# Project 2: Wall Bouncer
 
-This is the first project in Robotics 1 class. In this project, we will make a Roomba-like robot. The robot is expected to maneuver in a closed room without hitting the walls. The outcomes of this project are expected as follows:
-- Build a mobile robot with processors, actuators and sensors that are introduced in the class.
-- Write Python code to realize the wall bouncing robot (Feel free to write your code from scratch or start from [`wall_bouncer.py`](https://github.com/linzhangUCA/project_template-wall_bouncer/blob/main/wall_bouncer.py)).
-- Figure out a way to automatically launch the robot after booting up the RaspberryPi. Briefly describe your automatic startup approach or upload the script you used.  
-- Complete a project report using this file ([`README.md`](https://github.com/linzhangUCA/project_template-wall_bouncer/blob/main/README.md)).
-- Upload a video for demonstration (Unfortunately, you may need to compress your video before uploading).
+## Background
+[Roomba](https://www.irobot.com/en_US/roomba.html) is a very popular housekeeping robot. Despite the new technologies that are introduced to recent products, the navigation strategy of this robot can be fairly simple. In this project, we are going to turn our robots into Roomba replications. We will implement "FORWARD -> TURN" strategy to maneuver our robots in a closed space without running into the the walls.
 
-## Workflow
-3 LEDs (GREEN, YELLOW, RED), 1 button, (at least) 1 ultrasonic distance sensor and 2 motor drivers are needed. [gpiozero](https://gpiozero.readthedocs.io/en/stable/) library is highly recommended for your coding.
-1. Enable the motors. Confirm the motors are enabled (check GPIO pins voltage level). 
-2. Robot entering **Pausing** mode. Set the GREEN LED to be a dimmer (PWM). Make sure robot's motion is stopped in this mode.
-3. Press the button to enable the **Playing** mode. Robot should be able to move forward. Light up GREEN LED and keep the brightness a constant. Use the distance sensor (Feel free to use more than one) to monitor walls in front of the robot. Turn the robot away from the approaching wall within a certain distance.
-4. Press the button again will be able to switch the mode back to **Pausing**. Pressing the button later on can switch the mode back and forth. 
+You are expected to
+- Indicate robot's status using LEDs.
+- Change robot's working mode using a switch button.
+- Move robot around without hitting the walls.
 
-Record time consumption in **Playing** mode, once over 60 seconds, light up YELLOW LED. If over 90 seconds, turn off the robot and blink (turn on then turn off) the RED LED 10 times, then shut down the whole system.
+## Requirements:
+- The robot has 2 modes: **WORK** and **PAUSE**. 
+- Three LEDs (`GREEN`, `YELLOW`, `RED`) will be used to indicate the robot's status.
+- A button will be used to switch modes bewteen **WORK** and **PAUSE**.
+- A ultrasonic distance sensor will be used to detect walls.
+- A motor driver board will be used to drive the DC motors.
+
+### (70%) Programming
+1. (10%) Check sensor's health: 
+    - Check distance sensorsblink all the LEDs at the same time with frequency of 4 Hz, last 2 seconds. Then the robot enters **PAUSE** mode.
+2. (20%) When in **PAUSE** mode: `GREEN` LED endlessly fades in and fades out with frequency of 1 Hz. Press and release the button to switch mode to **WORK**.
+3. (20%) When in **WORK** mode: `GREEN` LED is constantly turned on. Press and release the button to switch mode to **PAUSE**.
+4. (20%) When in **WORK** or **PAUSE** mode, press and hold the button for 3 seconds to enter **DEV** mode. When in **DEV** mode, `BLUE` LED is constantly turned on and other LED should be turned off. 
+5. (15%) Time **WORK** mode. If the accumulated **WORK** time exceeds 15 seconds, turn on `YELLOW` LED (in **WORK** or **PAUSE** mode). If accumulated **WORK** time over 20 seconds, blink `RED` LED with frequency of 10 Hz for 2 seconds, then turn all the LEDs off and shutdown the system. 
+> If `RED` is blinking, you cannot enter **DEV** mode.
+
+### (15%) Documentation
+Complete the following sections in this README. Please refer to [Github formatting guide](https://docs.github.com/en/get-started/writing-on-github) to get familiar with Markdown formatting.
+1. (5%) Hardware Table: list the names, descriptions and quantities of physical components used in this project.
+2. (5%) Wiring Diagram: attach a drawing to illustrate components wiring.
+3. (5%) Summary: a few words to close this project.
+
+## Hardware Table
+> Name, Description, Quantity
+
+## Wiring Diagram
+> ![image name](link)
 
 ## Summary
-> Write below to complete this report. You may want to read the [Markdown guide](https://guides.github.com/features/mastering-markdown/) to better format this report.
-
-### Material List
-> Please list hardware (better with links) used in this project below.  
-
-### Software List
-> Please list and briefly describe the Python libraries and any software used to realize the robot.
-
-### Usage
-> Briefly describe how to use this robot. Imagine you are teaching a person how to use your robot.
-
-
+> What has been done? What are learned? Any thoughts? Any discussions?
