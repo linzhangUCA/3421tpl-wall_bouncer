@@ -29,8 +29,8 @@ You are expected to
     - Robot moves forward, turn a certain angle before getting too close to a wall. 
     - Press and release the button to switch mode to **PAUSE**.
 4. (25%) Time **WORK** mode:
-    - If the accumulated **WORK** time exceeds 30 seconds, turn on `YELLOW` LED to indicate low battery. Set robot speed to 75% as in **WORK** mode. 
-    - If accumulated **WORK** time over 40 seconds, turn off `YELLOW` LED. Blink `RED` LED at frequency of 10 Hz for 2 seconds.
+    - If the accumulated **WORK** time exceeds 30 seconds, turn on `YELLOW` LED to indicate "low battery". Set robot speed to 75% as in **WORK** mode. 
+    - If accumulated **WORK** time over 40 seconds, turn off `YELLOW` LED. Blink `RED` LED at frequency of 10 Hz for 2 seconds to indicate "out of energy".
     - After `RED` LED blinks over, turn all the LEDs off, stop the robot and shutdown the system. 
 
 ### (30%) Documentation
