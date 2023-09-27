@@ -30,7 +30,7 @@
    - (15%) **WORK** status indication (`YELLOW`, `RED`, timer, motors).
    - (5%) Terminal state handling (**DEV**, 1-minute shutdown).
 2. (10%) Robot moving strategy (how the robot moves). 
-3. (30%) Robot wall bouncing strategy (how the robot handling walls)
+3. (30%) Robot wall bouncing strategy (how the robot handles the walls)
 
 ### (30%) Documentation
 1. (10%) Part List Table: list the names, descriptions and quantities of physical components used in this project.
