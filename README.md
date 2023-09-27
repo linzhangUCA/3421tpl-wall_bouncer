@@ -20,6 +20,7 @@
   - `RED` blinks at 10 Hz to indicate the robot has worked more than **55 seconds**. **Robot speed should be reduced to 75% of original speed**.
   - Only time the **WORK** mode. **DO NOT light up `YELLOW` or `RED` no matter how long the robot is under PAUSE mode**.
 - Shutdown the robot after 1 minute of accumulated work (stop the motors, turn off all the LEDs).
+- Upload a python script that takes care of above robot behaviors. 
 - Complete the **Documentation** section in this README file. A newcomer is supposed to use this document to replicate your project.
 
 
