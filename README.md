@@ -38,15 +38,17 @@
 3. (5%) Summary: describe technical details
 
 ## Part List Table
-> Please refer to the [guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+> Please refer to the [table formatting guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+
 | Name | Description | Quantity |
 | :--- | :---        |  :---:   |
 |      |             |          |
 |      |             |          |
 
 ## Wiring Diagram
-Please refer to the [guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images)
-> ![image name](link)
+> Please refer to the [image insertion guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images)
+
+![image name](link)
 
 ## Summary
 > Describe your robot's speed, distance detection threshold, turning strategy, etc.. Place as many technical details as possible in this section. You are welcome to use more tables and images.
