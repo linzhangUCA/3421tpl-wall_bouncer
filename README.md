@@ -1,7 +1,7 @@
 # Project 2: Wall Bouncer
 
 ## Background
-[Roomba](https://www.irobot.com/en_US/roomba.html) is a very popular housekeeping robot. Despite the new technologies that are introduced to recent products, the "navigation" strategy of this robot can be fairly simple. Inspired by the Roomba, we are going to develop a robot that bounces in a closed space with motors and a distance sensor. We are going to integrate the human machine interface (HMI) that has been developed in the [first project](https://classroom.github.com/a/Ov8Qve2i) into this roomba replica. 
+[Roomba](https://www.irobot.com/en_US/roomba.html) is a very popular housekeeping robot. Despite the new technologies that are introduced to recent products, the "navigation" strategy of this robot can be fairly simple. Inspired by the Roomba, we are going to develop a robot that bounces in a closed space with motors and a distance sensor. We are going to integrate the human robot interface (HRI) that has been developed in the [first project](https://classroom.github.com/a/Ov8Qve2i) into this roomba replica. 
 
 ## Requirements:
 - Assemble the robot.
@@ -9,11 +9,18 @@
 - Document this project.
 
 ### (60%) Coding
-**Upload your Python script to this repository.**
-- Move the robot in the walled cell for 1 minute without hitting the wall. The "Forward And Turn" policy as described below should be good enough. You can also propose your own control policy and realize it. 
+**Upload your Python script to this repository.** 
+
+#### Main Objective
+Move the robot in a walled cell for 1 minute without hitting the wall.
+
+#### Reference Maneuver Strategy
+The "Forward And Turn" policy as described below should be good enough. You can also propose your own control policy and realize it. 
   1. Move forward if the robot is "far" from a wall (distance to wall > 0.4 m).
   2. Turn to a different direction if the robot is about to hit a wall (distance to wall <= 0.4 m).
   3. Repeat i and ii.
+     
+#### Functionalities 
 - The robot has 2 modes: **WORK MODE** and **PAUSE MODE**.
   - **WORK**: Robot carrys out wall-bouncing maneuvering. `GREEN` LED constantly on at full brightness.
   - **PAUSE**: Robot stops moving. `GREEN` LED fade in and fade out at 1 Hz.
