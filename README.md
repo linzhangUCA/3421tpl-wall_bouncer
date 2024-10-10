@@ -1,7 +1,7 @@
 # Project 2: Wall Bouncer
 
 ## Background
-[Roomba](https://www.irobot.com/en_US/roomba.html) is a very popular housekeeping robot. Despite the new technologies that are introduced to recent products, the "navigation" strategy of this robot can be fairly simple. Inspired by the Roomba, we are going to develop a robot that bounces in a closed space with motors and a distance sensor. We are going to integrate the human robot interface (HRI) that has been developed in the [first project](https://classroom.github.com/a/Ov8Qve2i) into this roomba replica. 
+[Roomba](https://www.irobot.com/en_US/roomba.html) is a very popular housekeeping robot. Despite the new technologies that are introduced to recent products, the "navigation" strategy of this robot can be fairly simple. Inspired by the Roomba, we are going to develop a robot that bounces in a closed space with motors and a distance sensor. We are going to integrate the human machine interface (HMI) that has been developed in the [first project](https://classroom.github.com/a/jYniyPtg) into this roomba replica. 
 
 ## Requirements:
 - Assemble the robot.
@@ -9,7 +9,7 @@
 - Document this project.
 
 ### (60%) Coding
-**Upload your Python script to this repository.** 
+> **Upload your Python script to this repository.** 
 
 #### Main Objective
 Move the robot in a walled cell for 1 minute without hitting the wall.
