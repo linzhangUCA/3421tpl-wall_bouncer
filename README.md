@@ -11,8 +11,8 @@
 ### (60%) Coding
 **Upload your Python script to this repository.**
 - Move the robot in the walled cell for 1 minute without hitting the wall. The "Forward And Turn" policy as described below should be good enough. You can also propose your own control policy and realize it. 
-  1. Move forward if the robot is "far" from a wall.
-  2. Turn around if the robot is about to hit a wall.
+  1. Move forward if the robot is "far" from a wall (distance to wall > 0.4 m).
+  2. Turn to a different direction if the robot is about to hit a wall (distance to wall <= 0.4 m).
   3. Repeat i and ii.
 - The robot has 2 modes: **WORK MODE** and **PAUSE MODE**.
   - **WORK**: Robot carrys out wall-bouncing maneuvering. `GREEN` LED constantly on at full brightness.
