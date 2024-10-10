@@ -22,31 +22,39 @@ You can use the "Forward And Turn" strategy as described below as your robot's m
   3. Repeat i and ii.
 
 #### Functionalities 
-- (2%) Initialization: blink all the LEDs at the same time with frequency of 5 Hz, last 2 seconds. Then the robot enters **PAUSE MODE**.
+- (5%) Initialization: blink all the LEDs at the same time with frequency of 5 Hz, last 2 seconds. Then the robot enters **PAUSE MODE**.
 - Mode switching: **WORK MODE** and **PAUSE MODE**.
-  - When **PAUSE MODE** is activated:
+  - (15%) When **PAUSE MODE** is activated:
     1. `GREEN` LED fades in and fades out at frequency of 1 Hz.
     2. Robot is stopped.
     3. Press the button to immediately switch to the **WORK MODE**.
-  - When **WORK MODE** is activated:
+  - (15%) When **WORK MODE** is activated:
     1. `GREEN` LED stays constantly on.
     2. Robot starts to move in the cell and avoid the wall.
     3. Press the button to switch back to the **PAUSE MODE**.
-- Low Battery Simulation.
+- (15%) Low Battery Simulation.
   - If accumulated **WORK MODE** time exceeds 60 seconds, turn on `YELLOW` LED.
   - If accumulated **WORK MODE** time over 75 seconds, blink RED LED at frequency of 10 Hz. Slow down motor with 75% original duty cycle.
-> **DO NOT** reset **WORK MODE** timer when switching the mode.
-- Termination
+  - > **DO NOT** reset **WORK MODE** timer when switching the mode.
+- (10%) Termination
   - Terminate everything (include motors) if `RED` LED blinked 15 seconds
   - Press and hold the button for 3 seconds to terminate (in both **WORK MODE** and **PAUSE MODE**).
     
 ### (40%) Documentation
 Complete the following sections in this [README](/README.md) file, so that other people may use it as a guide to replicate this robot.
 
-1. (10%) Part List Table: list the names, descriptions and quantities of physical components used in this project.
-2. (15%) Mechanical Layout Diagram: attach a drawing to illustrate how your robot is assembled.
-3. (15%) Wiring Diagram: attach a drawing to illustrate components wiring.
-4. (5%) Summary: describe technical details
+1. (5%) Part List Table
+   - List the names of all the physical components used for this project.
+   - Describe the **functionalities or key specifications** of the corresponding components
+   - Specify quantities of the components used.
+2. (20%) Mechanical Layout Diagram
+   - Illustrate shapes of key components (It is OKAY to use rectangles for circuit boards).
+   - Mark dimensions of key components.
+   - Specify locations and orientations of key components. 
+   - > Remember, people are supposed to follow this layout to assemble an identical robot.
+   - > You may need to use 2 illustrations (a top-view and a side-view).
+4. (10%) Wiring Diagram: attach a drawing to illustrate components wiring.
+5. (5%) TODO List: Describe unmet goals and possible solutions in the future.
 
 #### Part List Table
 > Please refer to the [table formatting guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
