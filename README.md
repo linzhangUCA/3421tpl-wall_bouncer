@@ -7,19 +7,16 @@
 - Assemble the robot.
 - Code the Raspberry Pi Pico.
 - Document this project.
-- Upload a python script that takes care of above robot behaviors. 
 
-
-### (70%) Coding
+### (60%) Coding
 **Upload your Python script to this repository.**
 - Move the robot in the walled cell for 1 minute without hitting the wall. The "Forward And Turn" policy as described below should be good enough. You can also propose your own control policy and realize it. 
   1. Move forward if the robot is "far" from a wall.
   2. Turn around if the robot is about to hit a wall.
   3. Repeat i and ii.
-- The robot has 3 modes: **WORK**, **PAUSE** and **DEV**.
+- The robot has 2 modes: **WORK MODE** and **PAUSE MODE**.
   - **WORK**: Robot carrys out wall-bouncing maneuvering. `GREEN` LED constantly on at full brightness.
   - **PAUSE**: Robot stops moving. `GREEN` LED fade in and fade out at 1 Hz.
-  - **DEV**: `BLUE` LED on. Terminate all other tasks.
   - Switch the modes using a `button`.
     - Short clicks: back and forth between **WORK** and **PAUSE**.
     - Hold 3 seconds: into **DEV**.
@@ -39,8 +36,9 @@
 Complete the following sections in this [README](/README.md) file, so that other people may use it as a guide to replicate this robot.
 
 1. (10%) Part List Table: list the names, descriptions and quantities of physical components used in this project.
-2. (15%) Wiring Diagram: attach a drawing to illustrate components wiring.
-3. (5%) Summary: describe technical details
+2. (15%) Mechanical Layout Diagram: attach a drawing to illustrate how your robot is assembled.
+3. (15%) Wiring Diagram: attach a drawing to illustrate components wiring.
+4. (5%) Summary: describe technical details
 
 #### Part List Table
 > Please refer to the [table formatting guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
