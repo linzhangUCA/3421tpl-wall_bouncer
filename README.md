@@ -15,7 +15,7 @@
 Move the robot in a walled cell for 1 minute without hitting the wall.
 
 #### Reference Maneuver Strategy
-The "Forward And Turn" policy as described below should be good enough. You can also propose your own control policy and realize it. 
+You can use the "Forward And Turn" strategy as described below as your robot's maneuvering strategy. You can also propose your own strategy and realize it. 
   1. Move forward if the robot is "far" from a wall (distance to wall > 0.4 m).
   2. Turn to a different direction if the robot is about to hit a wall (distance to wall <= 0.4 m).
   3. Repeat i and ii.
