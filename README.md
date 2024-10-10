@@ -37,7 +37,7 @@ You can use the "Forward And Turn" strategy as described below as your robot's m
   - If accumulated **WORK MODE** time over 75 seconds, blink RED LED at frequency of 10 Hz. Slow down motor with 75% original duty cycle.
 > **DO NOT** reset **WORK MODE** timer when switching the mode.
 - Termination
-  - Terminate everything (hint: break the endless loop) if `RED` LED blinked 15 seconds
+  - Terminate everything (include motors) if `RED` LED blinked 15 seconds
   - Press and hold the button for 3 seconds to terminate (in both **WORK MODE** and **PAUSE MODE**).
     
 ### (40%) Documentation
