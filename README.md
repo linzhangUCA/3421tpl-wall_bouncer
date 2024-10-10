@@ -7,6 +7,7 @@
 - Assemble the robot.
 - Code the Raspberry Pi Pico.
 - Document this project.
+- Demonstrate to the class. **-0.1 points for each failed wall avoidance**
 
 ### (60%) Coding
 > **Upload your Python script to this repository.** 
@@ -21,8 +22,16 @@ You can use the "Forward And Turn" strategy as described below as your robot's m
   3. Repeat i and ii.
      
 #### Functionalities 
-- The robot has 2 modes: **WORK MODE** and **PAUSE MODE**.
-  - **WORK**: Robot carrys out wall-bouncing maneuvering. `GREEN` LED constantly on at full brightness.
+- (2%) Initialization: blink all the LEDs at the same time with frequency of 5 Hz, last 2 seconds. Then the robot enters **PAUSE MODE**.
+- Mode switching: **WORK MODE** and **PAUSE MODE**.
+  - When **PAUSE MODE** is activated:
+    1. `GREEN` LED fades in and fades out at frequency of 1 Hz.
+    2. Robot is stopped.
+    3. Press the button to immediately switch to the **WORK MODE**.
+  - When **WORK MODE** is activated:
+    1. `GREEN` LED stays constantly on.
+    2. Robot starts to move in the cell and avoid the wall.
+    3. Press the button to switch back to the PAUSE MODE.
   - **PAUSE**: Robot stops moving. `GREEN` LED fade in and fade out at 1 Hz.
   - Switch the modes using a `button`.
     - Short clicks: back and forth between **WORK** and **PAUSE**.
