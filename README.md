@@ -20,7 +20,7 @@ You can use the "Forward And Turn" strategy as described below as your robot's m
   1. Move forward if the robot is "far" from a wall (distance to wall > 0.4 m).
   2. Turn to a different direction if the robot is about to hit a wall (distance to wall <= 0.4 m).
   3. Repeat i and ii.
-     
+
 #### Functionalities 
 - (2%) Initialization: blink all the LEDs at the same time with frequency of 5 Hz, last 2 seconds. Then the robot enters **PAUSE MODE**.
 - Mode switching: **WORK MODE** and **PAUSE MODE**.
@@ -31,8 +31,12 @@ You can use the "Forward And Turn" strategy as described below as your robot's m
   - When **WORK MODE** is activated:
     1. `GREEN` LED stays constantly on.
     2. Robot starts to move in the cell and avoid the wall.
-    3. Press the button to switch back to the PAUSE MODE.
-  - **PAUSE**: Robot stops moving. `GREEN` LED fade in and fade out at 1 Hz.
+    3. Press the button to switch back to the **PAUSE MODE**.
+- Low Battery Simulation.
+  - If accumulated **WORK MODE** time exceeds 60 seconds, turn on `YELLOW` LED.
+  - If accumulated **WORK MODE** time over 75 seconds, blink RED LED at frequency of 10 Hz. Slow down motor with 75% original duty cycle.
+> **DO NOT** reset **WORK MODE** timer when switching the mode
+    
   - Switch the modes using a `button`.
     - Short clicks: back and forth between **WORK** and **PAUSE**.
     - Hold 3 seconds: into **DEV**.
