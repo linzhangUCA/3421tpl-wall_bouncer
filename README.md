@@ -12,7 +12,10 @@ A human robot interface (HRI) from first project will be also integrated.
 - Document this project.
 - Demonstrate to the class. **-0.1 points for each failed wall avoidance**
 
-### (60%) Coding
+### 1. Assemble the Robot
+
+
+### 2. (60%) Coding
 > **Upload your Python script to this repository.** 
 
 #### Main Objective
