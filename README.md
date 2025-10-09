@@ -69,35 +69,27 @@ Major required components are listed below:
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy tools.
 
-### (35%) Documentation
-Complete the following sections in this [README](/README.md) file, so that other people may use it as a guide to replicate this robot.
+### 3. (35%) Documentation
 
-2. (20%) Mechanical Layout Diagram
-   - Illustrate shapes of key components (It is OKAY to use rectangles for circuit boards).
-   - Mark dimensions of key components.
-   - Specify locations and orientations of key components. 
-   - > Remember, people are supposed to follow this layout to assemble an identical robot.
-   - > You may need to use 2 illustrations (a top-view and a side-view).
-4. (10%) Wiring Diagram: attach a drawing to illustrate components wiring.
-5. (5%) TODO List: Describe unmet goals and possible solutions in the future.
+#### 3.1. (15%) Mechanical Design: attach (multiple) technical drawings to illustrate dimensions and locations of the key components of the mobile base. 
+- Denote dimensions of the bed.
+- Denote dimensions of the wheel assembly and the caster wheel.
+- Denote locations of the mounting holes.
+- Denote dimensions of the mounting holes.
 
-#### Part List Table
-> Please refer to the [table formatting guide](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables)
+> [!TIP]
+> - You may want to checkout TechDraw of FreeCAD. Other CAD software should have the similar tools.  
+> - Hand drawings are acceptable.
 
-| Name | Description | Quantity |
-| :--- | :---        |  :---:   |
-|      |             |          |
-|      |             |          |
+#### 3.2 (10%) Wiring Diagram: attach a drawing to illustrate electrical components' wiring.
+- Specify power wires using red and black wires.
+- Illustrate signal pin names.
+- Electronic components' values have to match your actual circuit.
 
-#### Mechanical Layout Diagram
-> Please refer to the [image insertion guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images)
+#### 3.3 (6%) Software Design
+Use a [flowchart](https://en.wikipedia.org/wiki/Flowchart) or a [algorithm/pseudocode table](https://www.overleaf.com/learn/latex/Algorithms) or a [itemized list](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists) to explain your wall avoidance strategy.
 
-![layout](link)
-
-#### Wiring Diagram
-> Please refer to the [image insertion guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images)
-
-![wiring](link)
-
-#### TODO List
-> Describe your robot's speed, distance detection threshold, turning strategy, etc.. Place as many technical details as possible in this section. You are welcome to use more tables and images.
+#### 3.4 Energy Efficient Path Planning (4%) 
+> The goal is using this robot to cover a rectangle-shape area.
+> Do your research, make reasonable assumptions and propose a path pattern for the robot to follow.
+> Please state why this pattern is energy efficient.  
