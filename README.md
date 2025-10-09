@@ -19,11 +19,13 @@ Major required components are listed below:
 | Power Expansion Board | 1 | Converts 6~24V to 5V. Split input power. |
 | Micro-GearMotor | 2 | Robot's actuator |
 | Wheels | 2 | Attach to the motors and maneuver the robot |
+| Raspberry Pi Pico | 1 | Send out and read in signals. Process and make decisions |
+| TB6612FNG Motor Driver Board | 1 | Control motor speed following PWM signals |
 | Ultrasonic Sensor | 1 | Sense distance to wall |
 | Common Cathode LED  | 1 | Indicate robot's status |
 | Tactile switch button  | 1 | Switch robot's working mode |
 
-> ![WARN]
+> [!WARNING]
 > Off-the-shelf rubber tires and wheels are no long allowed (use 3D printed wheels and tires).
 
 > [!TIP]
