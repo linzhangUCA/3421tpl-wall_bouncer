@@ -49,8 +49,10 @@ Major required components are listed below:
     - **Send signals to motor driver board and move the robot according to the distance sensing**.
 - Upload your script to this repository.
 - Complete following tasks:
-1. (3%) Initialization (System Check): blink all the LEDs at the same time if the button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
-   - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
+1. (3%) Initialization (System Check).
+   - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds when following conditions are satisfied.
+     - The button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`)
+     - Ultrasonic sensor is receiving non-zero distance measuring.
    - (1%) The robot enters `PAUSE MODE` after this step.
 2. (16%) When `PAUSE MODE` is activated:
    - (3%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
