@@ -50,7 +50,7 @@ Major required components are listed below:
 - Upload your script to this repository.
 - Complete following tasks:
 1. (3%) Initialization (System Check).
-   - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds when following conditions are satisfied.
+   - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds when both conditions below are satisfied.
      - The button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`)
      - Ultrasonic sensor is receiving non-zero distance measuring.
    - (1%) The robot enters `PAUSE MODE` after this step.
