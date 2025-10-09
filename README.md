@@ -69,13 +69,9 @@ Major required components are listed below:
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy tools.
 
-### (40%) Documentation
+### (35%) Documentation
 Complete the following sections in this [README](/README.md) file, so that other people may use it as a guide to replicate this robot.
 
-1. (5%) Part List Table
-   - List the names of all the physical components used for this project.
-   - Describe the **functionalities or key specifications** of the corresponding components
-   - Specify quantities of the components used.
 2. (20%) Mechanical Layout Diagram
    - Illustrate shapes of key components (It is OKAY to use rectangles for circuit boards).
    - Mark dimensions of key components.
