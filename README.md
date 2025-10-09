@@ -7,6 +7,8 @@ Inspired by the Roomba, we are going to develop a robot that navigates/bounces i
 A human robot interface (HRI) from first project will be also integrated. 
 
 ## Requirements:
+> [!IMPORTANT]
+> Demonstrate your robot to Dr. Zhang to redeem your credits.
 
 ### 1. Assemble the Robot
 Make sure every component is functional as expected.
@@ -92,7 +94,7 @@ Major required components are listed below:
 #### 3.3 (6%) Software Design
 Use a [flowchart](https://en.wikipedia.org/wiki/Flowchart) or a [algorithm/pseudocode table](https://www.overleaf.com/learn/latex/Algorithms) or a [itemized list](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists) to explain your wall avoidance strategy.
 
-#### 3.4 Energy Efficient Path Planning (4%) 
+#### 3.4 (4%) Energy Efficient Path Planning 
 > The goal is using this robot to cover a rectangle-shape area.
 > Do your research, make reasonable assumptions and propose a path pattern for the robot to follow.
 > Please state why this pattern is energy efficient.  
