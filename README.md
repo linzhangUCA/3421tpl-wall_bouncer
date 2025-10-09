@@ -7,10 +7,6 @@ Inspired by the Roomba, we are going to develop a robot that navigates/bounces i
 A human robot interface (HRI) from first project will be also integrated. 
 
 ## Requirements:
-- Assemble the robot.
-- Code the Raspberry Pi Pico.
-- Document this project.
-- Demonstrate to the class. **-0.1 points for each failed wall avoidance**
 
 ### 1. Assemble the Robot
 Make sure every component is functional as expected.
@@ -40,7 +36,7 @@ Major required components are listed below:
 > - Are all the components fit into the bed? If not, print one from [here](https://github.com/linzhangUCA/3421example-robot_assembly/tree/main/prints).
 
 
-### 2. (60%) Coding
+### 2. (65%) Coding
 - Program the Raspberry Pi Pico to: 
     - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
     - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
@@ -48,30 +44,30 @@ Major required components are listed below:
     - **Send signals to motor driver board and move the robot according to the distance sensing**.
 - Upload your script to this repository.
 - Complete following tasks:
-1. Initialization (System Check): blink all the LEDs at the same time if the button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
-   - (4%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
+1. (3%) Initialization (System Check): blink all the LEDs at the same time if the button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
+   - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
    - (1%) The robot enters `PAUSE MODE` after this step.
-2. When `PAUSE MODE` is activated:
-   - (10%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
-   - (10%) Press the button to **immediately** switch to the `WORK MODE`.
-3. When `WORK MODE` is activated:
-   - (4%) `GREEN` LED stays constantly on.
-   - (6%) Press the button to **immediately** switch to the **PAUSE MODE**.
-4. Time `WORK MODE`.
-   - (15%) If the accumulated `WORK MODE` time exceeds 45 seconds, substitute `GREEN` LED with **`BLUE`** LED in both modes (low-battery simulation).
-   - (5%) If accumulated `WORK MODE` time over 55 seconds, blink `RED` LED (`BLUE` LED keep working) at frequency of 10 Hz.
-5. (10%) Termination. **Despite the mode**, trigger a [hard reset](https://docs.micropython.org/en/latest/wipy/tutorial/reset.html#reset-and-boot-modes) if:
-   - `RED` LED blinked 5 seconds
-   - button is **pressed and held** for 3 seconds. 
+2. (16%) When `PAUSE MODE` is activated:
+   - (3%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
+   - (3%) Press the button to **immediately** switch to the `WORK MODE`.
+   - (10%) Robot stop moving
+3. (24%) When `WORK MODE` is activated:
+   - (1%) `GREEN` LED stays constantly on.
+   - (3%) Press the button to **immediately** switch to the **PAUSE MODE**.
+   - (20%) Robot start moving without hitting the wall.
+4. (20%) Low battery simulation.
+   - (5%) If the accumulated `WORK MODE` time exceeds 45 seconds, substitute `GREEN` LED with **`BLUE`** LED for both modes (low-battery simulation).
+   - (5%) If accumulated `WORK MODE` time over 55 seconds, blink `RED` LED at frequency of 10 Hz (`BLUE` and `GREEN` LED off).
+   - (10%) If the accumulated `WORK MODE` time exceeds 45 seconds, Use 50% dutycycle of the original to be the robot's speed (Make sure the robot is still movable). 
+5. (2%) Termination. Shutdown the system after the `RED` LED blinked 5 seconds.
 
 > [!IMPORTANT]
-> - Mode switching is NOT a one-time function.
-> - After 55 seconds of `WORK`, the `BLUE` LED and the `RED` LED are suppose to be functional together in both modes.
+> - It doesn't matter how your robot moves, but hitting a wall once during demonstration will cost 1% off your grade.
+> - Plan a good strategy of wall avoidance.
 
 > [!TIP]
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy tools.
-> - [global variables](https://realpython.com/python-use-global-variable-in-function/) are useful for interrup handling functions.
 
 ### (40%) Documentation
 Complete the following sections in this [README](/README.md) file, so that other people may use it as a guide to replicate this robot.
