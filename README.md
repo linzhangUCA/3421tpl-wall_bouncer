@@ -23,7 +23,8 @@ Major required components are listed below:
 | Common Cathode LED  | 1 | Indicate robot's status |
 | Tactile switch button  | 1 | Switch robot's working mode |
 
-- (5%) Off-the-shelf rubber tires and wheels are banned (use 3D printed wheels and tires).
+> ![WARN]
+> Off-the-shelf rubber tires and wheels are no long allowed (use 3D printed wheels and tires).
 
 > [!TIP]
 > Things you may want to check are listed but not limited below:
