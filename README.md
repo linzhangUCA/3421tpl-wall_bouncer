@@ -27,7 +27,9 @@ Major required components are listed below:
 | Common Cathode LED  | 1 | Indicate robot's status |
 | Tactile switch button  | 1 | Switch robot's working mode |
 
-> ![TIP]
+- (5%) Off-the-shelf rubber tires and wheels are banned (use 3D printed wheels and tires).
+
+> [!TIP]
 > Things you may want to check are listed but not limited below:
 > - Have you double checked circuit and no short circuit anywhere?
 > - Have you crimped connectors to motor wires?
@@ -37,7 +39,6 @@ Major required components are listed below:
 > - Are [motor driver](https://github.com/linzhangUCA/3421example-motor_control) and motors controllable?
 > - Are all the components fit into the bed? If not, print one from [here](https://github.com/linzhangUCA/3421example-robot_assembly/tree/main/prints).
 
-- (5%) Off-the-shelf rubber tires and wheels are banned (use 3D printed wheels and tires).
 
 ### 2. (60%) Coding
 - Program the Raspberry Pi Pico to: 
