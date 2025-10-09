@@ -13,7 +13,20 @@ A human robot interface (HRI) from first project will be also integrated.
 - Demonstrate to the class. **-0.1 points for each failed wall avoidance**
 
 ### 1. Assemble the Robot
-Make sure every component is functional as expected. 
+Make sure every component is functional as expected.
+Major required components are listed below:
+
+| Name  | Qty. | Functionality
+| ------------- | ------------- | ------------- |
+| Mobile Base  | 1 | To host other physical components of the robot |
+| 18650 Battery  | 2 | Power all the electrical and electronic components |
+| Power Expansion Board | 1 | Converts 6~24V to 5V. Split input power. |
+| Micro-GearMotor | 2 | Robot's actuator |
+| Wheels | 2 | Attach to the motors and maneuver the robot |
+| Ultrasonic Sensor | 1 | Sense distance to wall |
+| Common Cathode LED  | 1 | Indicate robot's status |
+| Tactile switch button  | 1 | Switch robot's working mode |
+
 > ![TIP]
 > Things you may want to check are listed but not limited below:
 > - Have you double checked circuit and no short circuit anywhere?
@@ -30,6 +43,8 @@ Make sure every component is functional as expected.
 - Program the Raspberry Pi Pico to: 
     - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
     - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
+    - **Read distance from ultrasonic sensor**.
+    - **Send signals to motor driver board and move the robot according to the distance sensing**.
 - Upload your script to this repository.
 - Complete following tasks:
 1. Initialization (System Check): blink all the LEDs at the same time if the button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
