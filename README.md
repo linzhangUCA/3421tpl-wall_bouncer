@@ -13,39 +13,50 @@ A human robot interface (HRI) from first project will be also integrated.
 - Demonstrate to the class. **-0.1 points for each failed wall avoidance**
 
 ### 1. Assemble the Robot
+Make sure every component is functional as expected. 
+> ![TIP]
+> Things you may want to check are listed but not limited below:
+> - Have you double checked circuit and no short circuit anywhere?
+> - Have you crimped connectors to motor wires?
+> - Have you charged the batteries?
+> - Are [Pico, LEDs and button](https://linzhanguca.github.io/_docs/robotics1-2025/0902/pico.pdf) functional?
+> - Is [distance sensor](https://github.com/linzhangUCA/3421example-ultrasonic_sensor) functional?
+> - Are [motor driver](https://github.com/linzhangUCA/3421example-motor_control) and motors controllable?
+> - Are all the components fit into the bed? If not, print one from [here](https://github.com/linzhangUCA/3421example-robot_assembly/tree/main/prints).
 
+- (5%) Off-the-shelf rubber tires and wheels are banned (use 3D printed wheels and tires).
 
 ### 2. (60%) Coding
-> **Upload your Python script to this repository.** 
+- Program the Raspberry Pi Pico to: 
+    - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
+    - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
+- Upload your script to this repository.
+- Complete following tasks:
+1. Initialization (System Check): blink all the LEDs at the same time if the button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`).
+   - (4%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds.
+   - (1%) The robot enters `PAUSE MODE` after this step.
+2. When `PAUSE MODE` is activated:
+   - (10%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
+   - (10%) Press the button to **immediately** switch to the `WORK MODE`.
+3. When `WORK MODE` is activated:
+   - (4%) `GREEN` LED stays constantly on.
+   - (6%) Press the button to **immediately** switch to the **PAUSE MODE**.
+4. Time `WORK MODE`.
+   - (15%) If the accumulated `WORK MODE` time exceeds 45 seconds, substitute `GREEN` LED with **`BLUE`** LED in both modes (low-battery simulation).
+   - (5%) If accumulated `WORK MODE` time over 55 seconds, blink `RED` LED (`BLUE` LED keep working) at frequency of 10 Hz.
+5. (10%) Termination. **Despite the mode**, trigger a [hard reset](https://docs.micropython.org/en/latest/wipy/tutorial/reset.html#reset-and-boot-modes) if:
+   - `RED` LED blinked 5 seconds
+   - button is **pressed and held** for 3 seconds. 
 
-#### Main Objective
-Move the robot in a walled cell for 1 minute without hitting the wall.
+> [!IMPORTANT]
+> - Mode switching is NOT a one-time function.
+> - After 55 seconds of `WORK`, the `BLUE` LED and the `RED` LED are suppose to be functional together in both modes.
 
-#### Reference Maneuver Strategy
-You can use the "Forward And Turn" strategy as described below as your robot's maneuvering strategy. You can also propose your own strategy and realize it. 
-  1. Move forward if the robot is "far" from a wall (distance to wall > 0.4 m).
-  2. Turn to a different direction if the robot is about to hit a wall (distance to wall <= 0.4 m).
-  3. Repeat i and ii.
+> [!TIP]
+> - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
+> - `print()` function and Python Shell are handy tools.
+> - [global variables](https://realpython.com/python-use-global-variable-in-function/) are useful for interrup handling functions.
 
-#### Functionalities 
-- (5%) Initialization: blink all the LEDs at the same time with frequency of 5 Hz, last 2 seconds. Then the robot enters **PAUSE MODE**.
-- Mode switching: **WORK MODE** and **PAUSE MODE**.
-  - (15%) When **PAUSE MODE** is activated:
-    1. `GREEN` LED fades in and fades out at frequency of 1 Hz.
-    2. Robot is stopped.
-    3. Press the button to immediately switch to the **WORK MODE**.
-  - (15%) When **WORK MODE** is activated:
-    1. `GREEN` LED stays constantly on.
-    2. Robot starts to move in the cell and avoid the wall.
-    3. Press the button to switch back to the **PAUSE MODE**.
-- (15%) Low Battery Simulation.
-  - If accumulated **WORK MODE** time exceeds 60 seconds, turn on `YELLOW` LED.
-  - If accumulated **WORK MODE** time over 75 seconds, blink RED LED at frequency of 10 Hz. Slow down motor with 75% original duty cycle.
-  - > **DO NOT** reset **WORK MODE** timer when switching the mode.
-- (10%) Termination
-  - Terminate everything (include motors) if `RED` LED blinked 15 seconds
-  - Press and hold the button for 3 seconds to terminate (in both **WORK MODE** and **PAUSE MODE**).
-    
 ### (40%) Documentation
 Complete the following sections in this [README](/README.md) file, so that other people may use it as a guide to replicate this robot.
 
