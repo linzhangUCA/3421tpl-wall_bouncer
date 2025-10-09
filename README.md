@@ -80,7 +80,7 @@ Major required components are listed below:
 
 #### 3.1. (15%) Mechanical Design: attach (multiple) technical drawings to illustrate dimensions and locations of the key components of the mobile base. 
 - Denote dimensions of the bed.
-- Denote dimensions of the wheel assembly and the caster wheel.
+- Denote dimensions and locations of the wheel assembly and the caster wheel.
 - Denote locations of the mounting holes.
 - Denote dimensions of the mounting holes.
 
