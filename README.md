@@ -90,7 +90,7 @@ Major required components are listed below:
 
 #### 3.2 (10%) Wiring Diagram: attach a drawing to illustrate electrical components' wiring.
 - Specify power wires using red and black wires.
-- Illustrate signal pin names.
+- Mark out employed signal pins' names.
 - Electronic components' values have to match your actual circuit.
 
 #### 3.3 (6%) Software Design
