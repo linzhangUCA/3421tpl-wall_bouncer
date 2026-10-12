@@ -1,36 +1,35 @@
 # Project 2: Wall Bouncer
+> [!IMPORTANT]
+> # Due: Thursday, Nov. 5th @ 5 PM
 
-## Background
+
+## 1. Overview
 [Roomba](https://www.irobot.com/en_US/roomba.html) is a very popular housekeeping robot. 
 Despite the new technologies introduced to recent products, the "navigation" strategy of this robot can be fairly simple. 
 Inspired by the Roomba, we are going to develop a robot that navigates/bounces in a closed cell. 
 The human robot interface (HRI) from first project will also be integrated. 
 
-## Requirements:
-> [!IMPORTANT]
-> Demonstrate your robot to Dr. Zhang to redeem your credits.
 
-### 1. Assemble the Robot
-Make sure every component is functional as expected.
-Major required components are listed below:
+## 2. Get Started
+### 2.1. Assemble the Robot
+Major components are listed below:
 
 | Name  | Qty. | Functionality
 | ------------- | ------------- | ------------- |
-| Mobile Base  | 1 | To host other physical components of the robot |
-| 18650 Battery  | 2 | Power all the electrical and electronic components |
+| Body frame  | 1 |  Hosts physical components.  |
+| 18650 Battery  | 2 | Power all the electrical components. |
 | Power Expansion Board | 1 | Converts 6~24V to 5V. Split input power. |
-| Micro-GearMotor | 2 | Robot's actuator |
-| Wheels | 2 | Attach to the motors and maneuver the robot |
+| Micro-GearMotor | 2 | Robot's actuator. |
+| Wheels | 2 | Attach to the motors and maneuver the robot. |
+| Solderless breadboard  | 1+ | Host electronics components |
 | Raspberry Pi Pico | 1 | Send out and read in signals. Process and make decisions |
 | TB6612FNG Motor Driver Board | 1 | Control motor speed following PWM signals |
 | Ultrasonic Sensor | 1 | Sense distance to wall |
 | Common Cathode LED  | 1 | Indicate robot's status |
-| Tactile switch button  | 1 | Switch robot's working mode |
-
-> [!WARNING]
-> Off-the-shelf rubber tires and wheels are no long allowed (use 3D printed wheels and tires).
+| Tactile switch button  | 1 | Switch robot's working mode. |
 
 > [!TIP]
+> Make sure every component is working by testing them.
 > Things you may want to check are listed but not limited below:
 > - Have you double checked circuit and no short circuit anywhere?
 > - Have you crimped connectors to motor wires?
@@ -41,7 +40,13 @@ Major required components are listed below:
 > - Are all the components fit into the bed? If not, print one from [here](https://github.com/linzhangUCA/3421example-robot_assembly/tree/main/prints).
 
 
-### 2. (65%) Coding
+## 3. Requirements:
+> [!IMPORTANT]
+> Demonstrate your robot to Dr. Zhang to redeem your credits.
+
+
+
+### 3.1. (65%) Coding
 - Program the Raspberry Pi Pico to: 
     - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
     - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
