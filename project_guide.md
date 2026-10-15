@@ -11,20 +11,19 @@ The human robot interface (HRI) from first project will also be integrated.
 
 
 ## 2. Get Started
-### 2.1. Assemble the Robot
-Major components are listed below:
+Major components required to assemble the robot are listed below:
 
 | Name  | Qty. | Functionality
 | ------------- | ------------- | ------------- |
-| Body frame  | 1 |  Hosts physical components.  |
-| 18650 Battery  | 2 | Power all the electrical components. |
+| Body frame  | 1 |  Hosts physical components of the robot.  |
+| 18650 Li-ion Battery  | 2 | Power all the electrical components. |
+| N20 Micro-GearMotor | 2 | Actuators. |
+| Wheel | 2 | Move the robot around. |
 | Power Expansion Board | 1 | Converts 6~24V to 5V. Split input power. |
-| Micro-GearMotor | 2 | Robot's actuator. |
-| Wheels | 2 | Attach to the motors and maneuver the robot. |
 | Solderless breadboard  | 1+ | Host electronics components |
-| Raspberry Pi Pico | 1 | Send out and read in signals. Process and make decisions |
-| TB6612FNG Motor Driver Board | 1 | Control motor speed following PWM signals |
-| Ultrasonic Sensor | 1 | Sense distance to wall |
+| Raspberry Pi Pico (2) | 1 | Process input signals, make decisions and output commanding signals |
+| TB6612FNG Motor Driver Board | 1 | Control motor speed |
+| HC-SR04 Sensor | 1 | Sense distance via ultrasound |
 | Common Cathode LED  | 1 | Indicate robot's status |
 | Tactile switch button  | 1 | Switch robot's working mode. |
 
