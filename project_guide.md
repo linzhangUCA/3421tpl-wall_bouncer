@@ -46,8 +46,8 @@ Major components required to assemble the robot are listed below:
 ### 3.1. Mechanical Design
 Please feel free to adapt to the [TBot](https://github.com/linzhangUCA/tbot_mechanical)'s mechanical design.
 You are encouraged to bring in unique designs made by yourselves.
-- Assemble your robot and upload a portrait (you have the choice picking the viewing angle) picture for your robot.
-- Use a top view diagram to illustrate:
+- (?%) Assemble your robot and upload a portrait picture (you pick the viewing angle) for your robot.
+- (?%) Use a top view diagram to illustrate:
   - Width and length of the base body (exclude wheels).
   - Diameter of the wheel
   - Length of the driving axle.
@@ -57,9 +57,15 @@ You are encouraged to bring in unique designs made by yourselves.
 > [!WARNING]
 > Tape is not allowed for the distance scanner.
 
-### 3.2. Electrical
+### 3.2. Electrical Design
+Wire up all the electrical and electronics components.
+- (?%) Deliver a wiring diagram to **ONLY** depict the power flowing around the circuit.
+  Please label out the input voltage for different components.
+- (?%) Deliver a Wiring diagram to **ONLY** illustrate the signal streams of the circuit.
+  Please express the direction of the signals.
+- (+?% Bonus) Include wiring (power and signal) for the MG90S servo.
 
-### 3.3. (50%) Coding
+### 3.3. (45%) Coding
 - Program the Raspberry Pi Pico to: 
     - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
     - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
@@ -94,7 +100,7 @@ You are encouraged to bring in unique designs made by yourselves.
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy tools.
 
-### 3. (35%) Documentation
+### 3. (15%) Documentation
 
 #### 3.1. (15%) Mechanical Design: attach (multiple) technical drawings to illustrate dimensions and locations of the key components of the mobile base. 
 - Denote dimensions of the bed.
