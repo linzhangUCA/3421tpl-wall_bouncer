@@ -43,9 +43,23 @@ Major components required to assemble the robot are listed below:
 > [!IMPORTANT]
 > Demonstrate your robot to Dr. Zhang to redeem your credits.
 
+### 3.1. Mechanical Design
+Please feel free to adapt to the [TBot](https://github.com/linzhangUCA/tbot_mechanical)'s mechanical design.
+You are encouraged to bring in unique designs made by yourselves.
+- Assemble your robot and upload a portrait (you have the choice picking the viewing angle) picture for your robot.
+- Use a top view diagram to illustrate:
+  - Width and length of the base body (exclude wheels).
+  - Diameter of the wheel
+  - Length of the driving axle.
+  - Location of the driving wheels and the caster wheel.
+- (+?% Bonus) Attach a distance scanner (made by the ultrasonic sensor and the MG90S servo) to the bed.
+- (+?% Bonus) Design a unique case for the ultrasonic sensor to attach to the MG90S servo. 
+> [!WARNING]
+> Tape is not allowed for the distance scanner.
 
+### 3.2. Electrical
 
-### 3.1. (65%) Coding
+### 3.3. (50%) Coding
 - Program the Raspberry Pi Pico to: 
     - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
     - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
