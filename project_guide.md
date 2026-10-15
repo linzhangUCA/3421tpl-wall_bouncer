@@ -53,7 +53,8 @@ You are encouraged to bring in unique designs made by yourselves.
   - Length of the driving axle.
   - Location of the driving wheels and the caster wheel.
 - (+?% Bonus) Attach a distance scanner (made by the ultrasonic sensor and the MG90S servo) to the bed.
-- (+?% Bonus) Design a unique case for the ultrasonic sensor to attach to the MG90S servo. 
+- (+?% Bonus) Design a unique case for the ultrasonic sensor attaching to the MG90S servo.
+  Upload a tech draw of the case to illustrate key dimensions of it. 
 > [!WARNING]
 > Tape is not allowed for the distance scanner.
 
@@ -66,12 +67,12 @@ Wire up all the electrical and electronics components.
 - (+?% Bonus) Include wiring (power and signal) for the MG90S servo.
 
 ### 3.3. (45%) Coding
+Code Pico board to drive the robot around a cell without hitting the walls. 
 - Program the Raspberry Pi Pico to: 
     - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
     - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
     - **Read distance from ultrasonic sensor**.
     - **Send signals to motor driver board and move the robot according to the distance sensing**.
-- Upload your script to this repository.
 - Complete following tasks:
 1. (3%) Initialization (System Check).
    - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds when both conditions below are satisfied.
@@ -100,7 +101,7 @@ Wire up all the electrical and electronics components.
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy tools.
 
-### 3. (15%) Documentation
+### 3.5. (?%) Documentation
 
 #### 3.1. (15%) Mechanical Design: attach (multiple) technical drawings to illustrate dimensions and locations of the key components of the mobile base. 
 - Denote dimensions of the bed.
