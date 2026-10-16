@@ -66,32 +66,36 @@ Wire up all the electrical and electronics components.
   Please express the direction of the signals.
 - (+?% Bonus) Include wiring (power and signal) for the MG90S servo.
 
-### 3.3. (45%) Coding
-Code Pico board to drive the robot around a cell without hitting the walls. 
-- Program the Raspberry Pi Pico to: 
-    - Encode robot's status into colors (`RED`, `GREEN`, `BLUE`) using LEDs .
-    - Switch robot's behavior between `WORK MODE` and `PAUSE MODE` using a button.
+### 3.3. (40%) Coding
+Code Pico to drive the robot around in a rectangular cell without hitting the walls. 
+- realize following functions:
+    - Encode robot's status into LED colors (`RED`, `GREEN`, `BLUE`).
+    - Switch robot's behavioral modes between `WORK` and `PAUSE` using a tactile button.
     - **Read distance from ultrasonic sensor**.
-    - **Send signals to motor driver board and move the robot according to the distance sensing**.
-- Complete following tasks:
-1. (3%) Initialization (System Check).
-   - (2%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds when both conditions below are satisfied.
+    - **Control differential drive mobile base's motion through the motor driver board**.
+1. (?%) Initialization (System Check).
+   - (?%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds if both conditions (below) are satisfied.
+     **Do not start wall bouncing if any of the init conditions is not met**.
      - The button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`)
      - Ultrasonic sensor is receiving non-zero distance measuring.
-   - (1%) The robot enters `PAUSE MODE` after this step.
-2. (16%) When `PAUSE MODE` is activated:
-   - (3%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
-   - (3%) Press the button to **immediately** switch to the `WORK MODE`.
-   - (10%) Robot stop moving
-3. (24%) When `WORK MODE` is activated:
-   - (1%) `GREEN` LED stays constantly on.
-   - (3%) Press the button to **immediately** switch to the **PAUSE MODE**.
-   - (20%) Robot start moving without hitting the wall.
-4. (20%) Low battery simulation.
-   - (5%) If the accumulated `WORK MODE` time exceeds 45 seconds, substitute `GREEN` LED with **`BLUE`** LED for both modes (low-battery simulation).
-   - (5%) If accumulated `WORK MODE` time over 55 seconds, blink `RED` LED at frequency of 10 Hz (`BLUE` and `GREEN` LED off).
-   - (10%) If the accumulated `WORK MODE` time exceeds 45 seconds, Use 50% dutycycle of the original to be the robot's speed (Make sure the robot is still movable). 
-5. (2%) Termination. Shutdown the system after the `RED` LED blinked 5 seconds.
+   - (?%) The robot enters `PAUSE` mode after this step.
+2. (?%) When `PAUSE` mode is activated:
+   - (?%) Stop both motors.
+   - (?%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
+   - (?%) Press the button, the robot switch to the `WORK` mode at the instant the button is **released**.
+3. (?%) When `WORK` mode is activated:
+   - (?%) `GREEN` LED stays on constantly.
+   - (?%) Press the button to switch to the `PAUSE` mode at the instant the button is **released**.
+   - (?%) Robot start wandering around without hitting the wall.
+     - Drive straight forward (using **at least 50% of the maximum duty cycle**) if no wall was detected within 0.25 m distance.
+     - Avoid hitting the wall within 0.25 m range by driving backward (half a second) then spinning in place in a random direction (half a second) with appropriate speed.
+     - (+?% Bonus) 
+4. (?%) Low battery simulation.
+   - (?%) If the accumulated `WORK MODE` time exceeds 45 seconds, substitute `GREEN` LED with **`BLUE`** LED for both modes (low-battery simulation).
+   - (?%) If accumulated `WORK MODE` time over 55 seconds, blink `RED` LED at frequency of 10 Hz (`BLUE` and `GREEN` LED off).
+   - (?%) If the accumulated `WORK MODE` time exceeds 45 seconds, Use 50% dutycycle of the original to be the robot's speed (Make sure the robot is still movable). 
+5. (?%) Termination.
+   Despite the mode, stop the motors and put the Pico 2 board into [Deep Sleep](https://docs.micropython.org/en/v1.16/rp2/quickref.html#deep-sleep-mode) if `RED` LED blinked 5 seconds.
 
 > [!IMPORTANT]
 > - It doesn't matter how your robot moves, but hitting a wall once during demonstration will cost 1% off your grade.
