@@ -41,7 +41,7 @@ Major components required to assemble the robot are listed below:
 
 ## 3. Requirements:
 > [!IMPORTANT]
-> Demonstrate your robot to Dr. Zhang to redeem your credits.
+> Live demo is required to redeem the credits for coding.
 
 ### 3.1. Mechanical Design
 Please feel free to adapt to the [TBot](https://github.com/linzhangUCA/tbot_mechanical)'s mechanical design.
@@ -79,6 +79,7 @@ Code Pico to drive the robot around in a rectangular cell without hitting the wa
      - The button's GPIO pin is receiving correct default signal (`0` for `PULL_DOWN`, `1` for `PULL_UP`)
      - Ultrasonic sensor is receiving non-zero distance measuring.
    - (?%) The robot enters `PAUSE` mode after this step.
+   - (+?% Bonus) Center the distance sensor (facing straightly forward).
 2. (?%) When `PAUSE` mode is activated:
    - (?%) Stop both motors.
    - (?%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
@@ -89,11 +90,19 @@ Code Pico to drive the robot around in a rectangular cell without hitting the wa
    - (?%) Robot start wandering around without hitting the wall.
      - Drive straight forward (using **at least 50% of the maximum duty cycle**) if no wall was detected within 0.25 m distance.
      - Avoid hitting the wall within 0.25 m range by driving backward (half a second) then spinning in place in a random direction (half a second) with appropriate speed.
-     - (+?% Bonus) 
+     - (+?% Bonus) Let the robot's heading direction be the reference $0^{\circ}$.
+       Under the forward traverse phase, use the servo-driven distance sensor to scan distance from $-60^{\circ}$ to $60^{\circ}$ then from $60^{\circ}$ to $-60^{\circ}$ in a period of 600 ms.
+     - (+?% Bonus) If the wall is detected (0.25 m away from any angle), perform the wall avoidance maneuver by:
+       1. Centering the distance sensor.
+       2. Backing up while turning away from the wall.
+          Please turn the robot based on the servo angle when the (0.25 m) wall was detected (CCW for positive angle, CW for negative angle).
+       3. Resume forward traverse. 
+       
 4. (?%) Low battery simulation.
-   - (?%) If the accumulated `WORK MODE` time exceeds 45 seconds, substitute `GREEN` LED with **`BLUE`** LED for both modes (low-battery simulation).
-   - (?%) If accumulated `WORK MODE` time over 55 seconds, blink `RED` LED at frequency of 10 Hz (`BLUE` and `GREEN` LED off).
-   - (?%) If the accumulated `WORK MODE` time exceeds 45 seconds, Use 50% dutycycle of the original to be the robot's speed (Make sure the robot is still movable). 
+   - (?%) If the accumulated `WORK` time exceeds 40 seconds (low-battery simulation):
+     - substitute `GREEN` light with **`YELLOW`** light for both modes.
+     - Use 50% of the original dutycycle to regulate the motors' speed (Make sure the robot is still movable).
+   - (?%) If accumulated `WORK` time over 55 seconds, blink `RED` LED (no other light) at frequency of 10 Hz.
 5. (?%) Termination.
    Despite the mode, stop the motors and put the Pico 2 board into [Deep Sleep](https://docs.micropython.org/en/v1.16/rp2/quickref.html#deep-sleep-mode) if `RED` LED blinked 5 seconds.
 
