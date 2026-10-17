@@ -16,16 +16,17 @@ Major components required to assemble the robot are listed below:
 | Name  | Qty. | Functionality
 | ------------- | ------------- | ------------- |
 | Body frame  | 1 |  Hosts physical components of the robot.  |
-| 18650 Li-ion Battery  | 2 | Power all the electrical components. |
-| N20 Micro-GearMotor | 2 | Actuators. |
+| 18650 Li-ion Battery  | 2 | Power source. |
+| N20 Micro-GearMotor | 2 | Actuators for wheels. |
 | Wheel | 2 | Move the robot around. |
 | Power Expansion Board | 1 | Converts 6~24V to 5V. Split input power. |
-| Solderless breadboard  | 1+ | Host electronics components |
-| Raspberry Pi Pico (2) | 1 | Process input signals, make decisions and output commanding signals |
-| TB6612FNG Motor Driver Board | 1 | Control motor speed |
+| Solderless breadboard  | 1+ | Hosts electronics components |
+| Raspberry Pi Pico (2) | 1 | Processes input signals, make decisions and output commanding signals |
+| TB6612FNG Motor Driver Board | 1 | Manipulates speed and direction of up to 2 motors |
 | HC-SR04 Sensor | 1 | Sense distance via ultrasound |
-| Common Cathode LED  | 1 | Indicate robot's status |
+| Common Cathode RGB LED  | 1 | Indicate robot's status |
 | Tactile switch button  | 1 | Switch robot's working mode. |
+| MG90S servo  | 1 | Sweep the ultrasound scanner. |
 
 > [!TIP]
 > Make sure every component is working by testing them.
