@@ -5,9 +5,9 @@
 
 ## 1. Overview
 [Roomba](https://www.irobot.com/en_US/roomba.html) is a very popular housekeeping robot. 
-Despite the new technologies introduced to recent products, the "navigation" strategy of this robot can be fairly simple. 
-Inspired by the Roomba, we are going to develop a robot that navigates/bounces in a closed cell. 
-The human robot interface (HRI) from first project will also be integrated. 
+Despite the new technologies introduced to recent products, the "navigation" strategy of this robot can be fairly simple.
+By travelling in straight lines and turning into different directions, Roomba is able to cover the cleaning job in a descent sized room.  
+Inspired by the Roomba, we are going to let our robot exploring a closed cell with the help of a distance sensor and a bouncy navigation strategy. 
 
 
 ## 2. Get Started
