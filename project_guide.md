@@ -69,11 +69,7 @@ Wire up all the electrical and electronics components.
 
 ### 3.3. (40%) Coding
 Code Pico to drive the robot around in a rectangular cell without hitting the walls. 
-- realize following functions:
-    - Encode robot's status into LED colors (`RED`, `GREEN`, `BLUE`).
-    - Switch robot's behavioral modes between `WORK` and `PAUSE` using a tactile button.
-    - **Read distance from ultrasonic sensor**.
-    - **Control differential drive mobile base's motion through the motor driver board**.
+realize following functions:
 1. (?%) Initialization (System Check).
    - (?%) Blink all LEDs with frequency of 5 Hz, lasting 2 seconds if both conditions (below) are satisfied.
      **Do not start wall bouncing if any of the init conditions is not met**.
@@ -98,22 +94,20 @@ Code Pico to drive the robot around in a rectangular cell without hitting the wa
        2. Backing up while turning away from the wall.
           Please turn the robot based on the servo angle when the (0.25 m) wall was detected (CCW for positive angle, CW for negative angle).
        3. Resume forward traverse. 
-       
 4. (?%) Low battery simulation.
    - (?%) If the accumulated `WORK` time exceeds 40 seconds (low-battery simulation):
      - substitute `GREEN` light with **`YELLOW`** light for both modes.
-     - Use 50% of the original dutycycle to regulate the motors' speed (Make sure the robot is still movable).
-   - (?%) If accumulated `WORK` time over 55 seconds, blink `RED` LED (no other light) at frequency of 10 Hz.
+     - Reduce the robot's speed to original's 50% in terms of dutycycle (Make sure the robot is still movable).
+   - (?%) If accumulated `WORK` time over 50 seconds, blink `RED` LED (no other light) at frequency of 10 Hz.
 5. (?%) Termination.
-   Despite the mode, stop the motors and put the Pico 2 board into [Deep Sleep](https://docs.micropython.org/en/v1.16/rp2/quickref.html#deep-sleep-mode) if `RED` LED blinked 5 seconds.
+   Despite the mode, stop the motors and put the Pico 2 board into [Deep Sleep](https://docs.micropython.org/en/v1.16/rp2/quickref.html#deep-sleep-mode) if `RED` LED blinked 10 seconds.
 
-> [!IMPORTANT]
-> - It doesn't matter how your robot moves, but hitting a wall once during demonstration will cost 1% off your grade.
-> - Plan a good strategy of wall avoidance.
+> [!WARNING]
+> Hitting a wall once during demonstration will cost 1% off your grade.
 
 > [!TIP]
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
-> - `print()` function and Python Shell are handy tools.
+> - `print()` function and Python Shell are handy debugging tools.
 
 ### 3.5. (?%) Documentation
 
