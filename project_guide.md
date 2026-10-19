@@ -25,6 +25,7 @@ Major components required to assemble the robot are listed below:
 | TB6612FNG Motor Driver Board | 1 | Manipulates speed and direction of up to 2 motors |
 | HC-SR04 Sensor | 1 | Sense distance via ultrasound |
 | Common Cathode RGB LED  | 1 | Indicate robot's status |
+| Resistors  | ? | limit current and/or divide voltage  |
 | Tactile switch button  | 1 | Switch robot's working mode. |
 | MG90S servo  | 1 | Sweep the ultrasound scanner. |
 
@@ -41,14 +42,15 @@ Major components required to assemble the robot are listed below:
 
 
 ## 3. Requirements:
-> [!IMPORTANT]
-> Live demo is required to redeem the credits for coding.
+> [!CAUTION]
+> - Live demo is required to redeem the credits for coding.
+> - Hitting a wall once during demonstration will cost 1% off your grade.
 
-### 3.1. Mechanical Design
+### 3.1. (15%) Mechanical Design
 Please feel free to adapt to the [TBot](https://github.com/linzhangUCA/tbot_mechanical)'s mechanical design.
 You are encouraged to bring in unique designs made by yourselves.
 - (?%) Assemble your robot and upload a portrait picture (you pick the viewing angle) for your robot.
-- (?%) Use a top view diagram to illustrate:
+- (?%) Use a top-view drawing to illustrate:
   - Width and length of the base body (exclude wheels).
   - Diameter of the wheel
   - Length of the driving axle.
@@ -56,18 +58,19 @@ You are encouraged to bring in unique designs made by yourselves.
 - (+?% Bonus) Attach a distance scanner (made by the ultrasonic sensor and the MG90S servo) to the bed.
 - (+?% Bonus) Design a unique case for the ultrasonic sensor attaching to the MG90S servo.
   Upload a tech draw of the case to illustrate key dimensions of it. 
+- (+?% Bonus) Other mechanical designs different from the [TBot](https://github.com/linzhangUCA/tbot_mechanical).
 > [!WARNING]
-> Tape is not allowed for the distance scanner.
+> Temporary solutions, such as tape and glue, are not allowed for mounting the distance scanner.
 
-### 3.2. Electrical Design
+### 3.2. (20%) Electrical Design
 Wire up all the electrical and electronics components.
-- (?%) Deliver a wiring diagram to **ONLY** depict the power flowing around the circuit.
+- (?%) Upload a wiring diagram to **ONLY** depict the **power** flowing around the circuit.
   Please label out the input voltage for different components.
-- (?%) Deliver a Wiring diagram to **ONLY** illustrate the signal streams of the circuit.
+- (?%) Upload a Wiring diagram to **ONLY** illustrate the **signal** streams of the circuit.
   Please express the direction of the signals.
 - (+?% Bonus) Include wiring (power and signal) for the MG90S servo.
 
-### 3.3. (40%) Coding
+### 3.3. (45%) Coding
 Code Pico to drive the robot around in a rectangular cell without hitting the walls. 
 realize following functions:
 1. (?%) Initialization (System Check).
@@ -102,34 +105,25 @@ realize following functions:
 5. (?%) Termination.
    Despite the mode, stop the motors and put the Pico 2 board into [Deep Sleep](https://docs.micropython.org/en/v1.16/rp2/quickref.html#deep-sleep-mode) if `RED` LED blinked 10 seconds.
 
-> [!WARNING]
-> Hitting a wall once during demonstration will cost 1% off your grade.
-
 > [!TIP]
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy debugging tools.
 
-### 3.5. (?%) Documentation
+### 3.5. (20%) Documentation
+> [!CAUTION]
+> Use [README](README.md) for documentaion.
 
-#### 3.1. (15%) Mechanical Design: attach (multiple) technical drawings to illustrate dimensions and locations of the key components of the mobile base. 
-- Denote dimensions of the bed.
-- Denote dimensions and locations of the wheel assembly and the caster wheel.
-- Denote locations of the mounting holes.
-- Denote dimensions of the mounting holes.
+#### 3.5.1. (6%) Illustrate mechanical designs
+- Display the portrait of your robot with resolution of 800 px. by 600 px..
+- Display the dimension drawing with resolution of 1200 px. by 900 px..
 
-> [!TIP]
-> - You may want to checkout TechDraw of FreeCAD. Other CAD software should have the similar tools.  
-> - Hand drawings are acceptable.
+#### 3.5.2. (9%) Wiring diagrams
+- Display the wiring diagram of the **power streams** with a resolution of 800 px. by 600 px..
+- Display the wiring diagram of the **signal streams** with a resolution of 800 px. by 600 px..
 
-#### 3.2 (10%) Wiring Diagram: attach a drawing to illustrate electrical components' wiring.
-- Specify power wires using red and black wires.
-- Mark out employed signal pins' names.
-- Electronic components' values have to match your actual circuit.
+#### 3.5.3. (4%) Algorithm
+Use a [flowchart](https://en.wikipedia.org/wiki/Flowchart) or a [algorithm/pseudocode table](https://www.overleaf.com/learn/latex/Algorithms) or a [itemized list](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists) to explain your robot's navigation strategy.
 
-#### 3.3 (6%) Software Design
-Use a [flowchart](https://en.wikipedia.org/wiki/Flowchart) or a [algorithm/pseudocode table](https://www.overleaf.com/learn/latex/Algorithms) or a [itemized list](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists) to explain your wall avoidance strategy.
+#### 3.5.4. (1%) Acknowledge AI's contributions 
+Please list out all the AI's contributions to this project.
 
-#### 3.4 (4%) Energy Efficient Path Planning 
-> The goal is using this robot to cover a rectangle-shape area.
-> Do your research, make reasonable assumptions and propose a path pattern for the robot to follow.
-> Please state why this pattern is energy efficient.  
