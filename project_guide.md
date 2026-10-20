@@ -54,7 +54,7 @@ The primary hardware components required to build the robot are listed below:
 - (+4% Bonus) Attach a distance scanner (made by the ultrasonic sensor and the MG90S servo) to the bed.
 - (+8% Bonus) Design a unique case for the ultrasonic sensor attaching to the MG90S servo.
   Upload a tech draw of the case to illustrate key dimensions of it. 
-- (+1~10% Bonus) Other mechanical designs outstand the [TBot](https://github.com/linzhangUCA/tbot_mechanical).
+- (+0~8% Bonus) Other mechanical designs outstand the [TBot](https://github.com/linzhangUCA/tbot_mechanical).
 > [!WARNING]
 > Temporary solutions, such as tape and glue, are not allowed for mounting the distance scanner.
 
