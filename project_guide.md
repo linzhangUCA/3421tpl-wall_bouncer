@@ -88,9 +88,9 @@ realize following functions:
    - (16%) Robot start wandering around without hitting the wall.
      - (4%) Drive straight forward (using **at least 50% of the maximum speed in terms of duty cycle**) if no wall was detected within 0.25 m distance.
      - (12%) Avoid hitting the wall within 0.25 m range by driving backward (half a second) then spinning in place in a random direction (half a second) with appropriate speed.
-     - (+15% Bonus) Let the robot's heading direction be the reference $0^{\circ}$.
+     - (+16% Bonus) Let the robot's heading direction be the reference $0^{\circ}$.
        Under the forward traverse phase, use the servo-driven distance sensor to scan distance from $-60^{\circ}$ to $60^{\circ}$ then from $60^{\circ}$ to $-60^{\circ}$ in a period of 600 ms.
-     - (+20% Bonus) If the wall is detected (0.25 m away from any angle), perform the wall avoidance maneuver by:
+     - (+16% Bonus) If the wall is detected (0.25 m away from any angle), perform the wall avoidance maneuver by:
        1. Centering the distance sensor.
        2. Backing up while turning away from the wall.
           Please turn the robot based on the servo angle when the (0.25 m) wall was detected (CCW for positive angle, CW for negative angle).
