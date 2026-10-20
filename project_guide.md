@@ -46,7 +46,6 @@ Major components required to assemble the robot are listed but not limited to th
 > - Hitting a wall once during demonstration will cost 1% off your grade of this project.
 
 ### 3.1. (15%) Mechanical Design
-You are encouraged to bring in unique designs made by yourselves.
 - (5%) Assemble your robot and upload a portrait picture (you pick the viewing angle) for your robot.
   Try to reveal as many key components as possible.
 - (10%) Use a top-view drawing to illustrate:
