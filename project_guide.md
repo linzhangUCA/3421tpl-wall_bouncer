@@ -68,7 +68,7 @@ Wire up all the electrical and electronics components.
   Please express the direction of the signals.
 - (+8% Bonus) Include wiring (power and signal) for the MG90S servo.
 
-### 3.3. (45%) Coding
+### 3.3. (50%) Coding
 Code Pico to drive the robot around in a rectangular cell without hitting the walls. 
 realize following functions:
 1. (7%) Initialization (System Check).
@@ -82,12 +82,12 @@ realize following functions:
    - (2%) Quick stop both motors.
    - (2%) `GREEN` LED fades in and fades out at frequency of 1 Hz (equally allocate fade-in and fade-out time).
    - (2%) Press the button, the robot switch to the `WORK` mode at the instant the button is **released**.
-3. (19%) When `WORK` mode is activated:
+3. (23%) When `WORK` mode is activated:
    - (1%) `GREEN` LED stays on constantly.
    - (2%) Press the button to switch to the `PAUSE` mode at the instant the button is **released**.
-   - (16%) Robot start wandering around without hitting the wall.
-     - (4%) Drive straight forward (using **at least 50% of the maximum speed in terms of duty cycle**) if no wall was detected within 0.25 m distance.
-     - (12%) Avoid hitting the wall within 0.25 m range by driving backward (half a second) then spinning in place in a random direction (half a second) with appropriate speed.
+   - (20%) Robot start wandering around without hitting the wall.
+     - (5%) Drive straight forward (using **at least 50% of the maximum speed in terms of duty cycle**) if no wall was detected within 0.25 m distance.
+     - (15%) Avoid hitting the wall within 0.25 m range by driving backward (half a second) then spinning in place in a random direction (half a second) with appropriate speed.
      - (+16% Bonus) Let the robot's heading direction be the reference $0^{\circ}$.
        Under the forward traverse phase, use the servo-driven distance sensor to scan distance from $-60^{\circ}$ to $60^{\circ}$ then from $60^{\circ}$ to $-60^{\circ}$ in a period of 600 ms.
      - (+16% Bonus) If the wall is detected (0.25 m away from any angle), perform the wall avoidance maneuver by:
@@ -95,8 +95,8 @@ realize following functions:
        2. Backing up while turning away from the wall.
           Please turn the robot based on the servo angle when the (0.25 m) wall was detected (CCW for positive angle, CW for negative angle).
        3. Resume forward traverse. 
-4. (9%) Low battery simulation.
-   - (6%) If the accumulated `WORK` time exceeds 40 seconds (low-battery simulation):
+4. (10%) Low battery simulation.
+   - (7%) If the accumulated `WORK` time exceeds 40 seconds (low-battery simulation):
      - substitute `GREEN` light with **`YELLOW`** light for both modes.
      - Reduce the robot's speed to original's 50% in terms of dutycycle (Make sure the robot is still movable).
    - (3%) If accumulated `WORK` time over 50 seconds, blink `RED` LED (no other light) at frequency of 10 Hz.
@@ -104,30 +104,30 @@ realize following functions:
    Despite the mode, stop the motors and put the Pico 2 board into [Deep Sleep](https://docs.micropython.org/en/v1.16/rp2/quickref.html#deep-sleep-mode) if `RED` LED blinked 10 seconds.
 
 > [!TIP]
+> - Reuse the code from project 1.
 > - Break tasks down into small pieces (the smaller the better). You may need write a handful of unit test scripts.
 > - `print()` function and Python Shell are handy debugging tools.
 
-### 3.5. (20%) Documentation
+### 3.5. (15%) Documentation
 > [!CAUTION]
 > Use [README](README.md) for documentaion.
 
-#### 3.5.1. (6%) Illustrate mechanical designs
+#### 3.5.1. (4%) Illustrate mechanical designs
 - Display the portrait of your robot with resolution of 800 px. by 600 px..
 - Display the dimension drawing with resolution of 1200 px. by 900 px..
 
-#### 3.5.2. (9%) Wiring diagrams
+#### 3.5.2. (4%) Wiring diagrams
 - Display the wiring diagram of the **power streams** with a resolution of 800 px. by 600 px..
 - Display the wiring diagram of the **signal streams** with a resolution of 800 px. by 600 px..
 
-#### 3.5.3. (4%) Algorithm
-Use a [flowchart](https://en.wikipedia.org/wiki/Flowchart) or a [algorithm/pseudocode table](https://www.overleaf.com/learn/latex/Algorithms) or a [itemized list](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists) to explain your robot's navigation strategy.
+#### 3.5.3. (7%) Algorithm
+Use a [flowchart](https://en.wikipedia.org/wiki/Flowchart) or a [algorithm/pseudocode table](https://www.overleaf.com/learn/latex/Algorithms) or a [itemized list](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists) to explain your code.
 
 #### 3.5.4. (1%) Acknowledge AI's contributions 
+Please list out all the AI's contributions to this project.
 
 ## 4. Resources
 - [Distance sensor examples](https://github.com/linzhangUCA/3421example-ultrasonic_sensor).
 - [(Dual) Motor driver examples](https://github.com/linzhangUCA/3421example-differential_drive_controller).
 - [Reference Mechanical Design: tbot_mechanical](https://github.com/linzhangUCA/tbot_mechanical).
-
-Please list out all the AI's contributions to this project.
 
