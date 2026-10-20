@@ -96,10 +96,10 @@ realize following functions:
           Please turn the robot based on the servo angle when the (0.25 m) wall was detected (CCW for positive angle, CW for negative angle).
        3. Resume forward traverse. 
 4. (9%) Low battery simulation.
-   - (5%) If the accumulated `WORK` time exceeds 40 seconds (low-battery simulation):
+   - (6%) If the accumulated `WORK` time exceeds 40 seconds (low-battery simulation):
      - substitute `GREEN` light with **`YELLOW`** light for both modes.
      - Reduce the robot's speed to original's 50% in terms of dutycycle (Make sure the robot is still movable).
-   - (4%) If accumulated `WORK` time over 50 seconds, blink `RED` LED (no other light) at frequency of 10 Hz.
+   - (3%) If accumulated `WORK` time over 50 seconds, blink `RED` LED (no other light) at frequency of 10 Hz.
 5. (4%) Termination.
    Despite the mode, stop the motors and put the Pico 2 board into [Deep Sleep](https://docs.micropython.org/en/v1.16/rp2/quickref.html#deep-sleep-mode) if `RED` LED blinked 10 seconds.
 
