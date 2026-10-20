@@ -67,6 +67,9 @@ Wire up all the electrical and electronics components.
 - (+8% Bonus) Include wiring (power and signal) for the MG90S servo in both schematics.
 
 ### 3.3. Coding (50% Base + Bonus)
+> [!IMPORTANT]
+> Upload all your code to the project repository, including the imported ones.
+
 Code Pico to drive the robot around in a rectangular cell without hitting the walls. 
 realize following functions:
 1. (7%) Initialization (System Check).
